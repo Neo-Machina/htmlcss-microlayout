@@ -1,0 +1,40 @@
+/* PRODUCT-CARD */
+.product-card {
+    color: #494949;
+}
+.product-card img {
+    max-width: 100%;
+}
+
+.product-card .ms_underline {
+    text-decoration: underline dotted #e0e0e0;
+    
+}
+/* image */
+.product-card .pc-image {
+    position: relative;
+}
+.product-card .ms_heart {
+    background-color: white;
+    color: black;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+}
+.product-card .ms_heart i {
+
+}
+/* product-info-area */
+.product-card .ms_circles > * {
+    display: inline-block;
+    vertical-align: middle;
+}
+.product-card .ms_circles .ms_circle {
+    background-color: #00aa6c;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
