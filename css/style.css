@@ -2,13 +2,9 @@
 .trip-card {
     color: #494949;
 }
+
 .trip-card img {
     max-width: 100%;
-}
-.trip-card .tc-image img {
-    height: 220px;
-    object-fit: cover;
-    width: 100%;
 }
 
 .trip-card .ms_underline {
@@ -19,26 +15,33 @@
 .ms_desktop-element {
     display: none;
 }
-.ms_red-color {
+
+.trip-card .ms_red-color {
     color: red;
 }
-.ms_line-throught {
-    text-decoration: line-through;
-}
-.ms_black-color {
+
+.trip-card .ms_black-color {
     color: black;
 }
-.ms_bold-font {
+
+.trip-card .ms_bold-font {
     font-weight: bold;
 }
+
 .trip-card a {
     text-decoration: none;
     color: inherit;
 }
+
 .trip-card .ms_vert-align i {
     vertical-align: middle;
 }
-/* image */
+/* Image */
+.trip-card .tc-image img {
+    height: 220px;
+    object-fit: cover;
+    width: 100%;
+}
 .trip-card .tc-image {
     position: relative;
 }
@@ -56,16 +59,15 @@
     line-height: 35px;
     font-size: 20px;
 }
+
+/* Trip-card content */
 /* title */
 .trip-card .tc-content h2 {
     font-size: 20px;
     color: black;
+    padding-top: 10px;
 }
-/* trip-content */
-.tc-content {
-    
-}
-/* trip-info-area */
+/* Trip-info-area */
 .trip-card .ms_circles > * {
     display: inline-block;
     vertical-align: middle;
@@ -86,12 +88,17 @@
     padding-top: 20px;
 }
 /* Expedia offer-area */
+/* logo-expedia */
 .trip-card .ms_logo-expedia img {
     width: 9rem;
 }
-.ms_row {
+/* columns */
+.trip-card .tc-expedia .ms_row {
     display: flex;
     justify-content: space-between;
+}
+.trip-card .tc-expedia .ms_line-throught {
+    text-decoration: line-through;
 }
 .trip-card .tc-expedia .ms_discount {
     font-size: 25px;
@@ -100,13 +107,14 @@
 .trip-card .tc-expedia .ms_expedia-link {
     padding-bottom: 8px;
 }
+/* yellow-button */
 .trip-card .tc-expedia .ms_yellow_btn {
     background-color: #f2b203;
     padding: 8px 18px;
     border-radius: 15px;
     display: inline-block;
 }
-/* price offer-area */
+/* Price offer-area */
 .trip-card .tc-offer .ms_comparison {
     text-align: center;
 }
@@ -141,16 +149,13 @@
     .trip-card {
         display: flex;
     }
-    .trip-card {
-        border: 1px solid red;
-    }
     .ms_mobile-element {
         display: none;
     }
     .ms_desktop-element {
         display: block;
     }
-    /* image */
+    /* Image */
     .trip-card .tc-image {
         width: 30%;
     }
@@ -168,6 +173,7 @@
     .trip-card .tc-content {
         width: 70%;
     }
+    /* title */
     .trip-card .tc-content h2 {
         font-size: 30px;
         padding: 10px 20px 0;
@@ -175,28 +181,29 @@
     /* tc-text-description */
     .tc-text-description {
         display: flex;
-        border: 1px solid red;
     }
-
-    /* trip info-area */
+    /* Trip info-area */
     .trip-card .tc-info {
         width: 40%;
         order: 3;
         padding-left: 10px;
         padding-top: 20px;
     }
+    /* circles */
     .trip-card .ms_circles {
         padding-bottom: 3px;
     }
-    /* expedia offer-area */
+    /* Expedia offer-area */
     .trip-card .tc-expedia {
         order: 1;
         width: 34%;
         text-align: center;
     }
+    /* logo-expedia */
     .trip-card .ms_logo-expedia img {
         margin-bottom: -20px;
     }
+    /* columns */
     .trip-card .tc-expedia .ms_row {
         display: block;
     }
@@ -208,55 +215,60 @@
         font-size: 28px;
         padding-bottom: 20px;
     }
-    .trip-card .tc-expedia .ms_btn {
-    }
+    /* yellow-button */
     .trip-card .tc-expedia .ms_yellow_btn {
         padding: 13px 45px;
         margin-bottom: 10px;
     }
+    /* check-div */
     .trip-card .tc-expedia .ms_check {
         text-align: left;
         padding: 0 20px;
+        display: flex;
     }
     .trip-card .tc-expedia .ms_bottom-check {
         padding-bottom: 30px;
     }
-    /* price offer-area */
-    .tc-offer {
+    .trip-card .tc-expedia .ms_margin-check {
+        margin-right: 8px;
+    }
+    /* Price offer-area */
+    .trip-card .tc-offer {
         order: 2;
         width: 26%;
         text-align: center;
         position: relative;
         padding-top: 20px;
     }
-    .tc-offer::before {
+    .trip-card .tc-offer::before {
         content: "";
-        height: 100%;
-        border-left: 1px dotted red;
+        border-left: 1px dotted #e0e0e0;
         position: absolute;
-        top: 0;
+        top: 1.5rem;
         left: 0;
+        bottom: 1.5rem;
     }
-    .tc-offer::after {
+    .trip-card .tc-offer::after {
         content: "";
-        height: 100%;
-        border-right: 1px dotted red;
+        border-right: 1px dotted #e0e0e0;
         position: absolute;
-        top: 0;
+        top: 1.5rem;
         right: 0;
+        bottom: 1.5rem;
     }
 }
 /* xl-screen */
 @media screen and (min-width: 1200px) {
-    /* expedia offer-area */
+    /* Expedia offer-area */
+    /* yellow-button */
     .trip-card .tc-expedia .ms_yellow_btn {
         padding: 13px 70px;
     }
-    /* price offer-area */
+    /* Price offer-area */
     .trip-card .tc-offer .ms_all_offers::before {   
         width: 90%;
     }
-    .ms_padd-left-right {
+    .trip-card .ms_padd-left-right {
         display: inline-block;
         padding: 0 12px;
     }
